@@ -1,5 +1,5 @@
 ---
-title: "Primera presentación"
+title: "Primera presentacion"
 author: "Yo"
 format: 
   revealjs:
@@ -10,14 +10,19 @@ execute:
 ---
 
 ## Cargar los datos
+
 ```{r}
 load(file = "C:/Users/jazmi/OneDrive/Escritorio/SOFTWARE_2/datos/accidentes2020_data.rda")
 
 library(tidyverse)
 accidentes_tb <- as_tibble(accidentes2020_data)
 ```
+
 ---
+
+
 ## Nº de accidentes por sexo
+
 ```{r}
 resumen <- accidentes_tb |> 
   count(sexo)
@@ -26,10 +31,11 @@ resumen
 ```
 ---
 
-## Visualización de datos
+## Visualizacion de datos
+
 ```{r}
 #| code-fold: true
-#| 
+
 ggplot(resumen) +
   geom_col(aes(x = sexo, y = n, fill = sexo), alpha = 0.4) +
   ggthemes::scale_fill_colorblind()
