@@ -1,0 +1,42 @@
+---
+title: "Primera presentacion"
+author: "Yo"
+format: 
+  revealjs:
+    embed-resources: true
+editor: visual
+execute: 
+  echo: true
+---
+
+## Cargar los datos
+
+```{r}
+load(file = "C:/Users/jazmi/OneDrive/Escritorio/SOFTWARE_2/datos/accidentes2020_data.rda")
+
+library(tidyverse)
+accidentes_tb <- as_tibble(accidentes2020_data)
+```
+
+------------------------------------------------------------------------
+
+## Nº de accidentes por sexo
+
+```{r}
+resumen <- accidentes_tb |> filter(sexo != "Desconocido") |> 
+  count(sexo)
+
+resumen
+```
+
+------------------------------------------------------------------------
+
+## Visualizacion de datos
+
+```{r}
+#| code-fold: true
+
+ggplot(resumen) +
+  geom_col(aes(x = sexo, y = n, fill = sexo), alpha = 0.4) +
+  scale_fill_manual(values = c("red", "green"))
+```
