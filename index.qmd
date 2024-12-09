@@ -4,6 +4,7 @@ author: "Yo"
 format: 
   revealjs:
     embed-resources: true
+    css: styles.css
 editor: visual
 execute: 
   echo: true
@@ -18,8 +19,7 @@ library(tidyverse)
 accidentes_tb <- as_tibble(accidentes2020_data)
 ```
 
----
-
+------------------------------------------------------------------------
 
 ## Nº de accidentes por sexo
 
@@ -29,7 +29,8 @@ resumen <- accidentes_tb |>
 
 resumen
 ```
----
+
+------------------------------------------------------------------------
 
 ## Visualizacion de datos
 
@@ -40,10 +41,3 @@ ggplot(resumen) +
   geom_col(aes(x = sexo, y = n, fill = sexo), alpha = 0.4) +
   ggthemes::scale_fill_colorblind()
 ```
-
-
-
-
-
-
-

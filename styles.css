@@ -1,0 +1,7 @@
+body {
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.marketplace.org%2F2023%2F12%2F22%2Fcancel-subscriptions-motivational-sayings%2F&psig=AOvVaw3EjSm1Eu60tlEOL8vuS68z&ust=1733827444502000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPi0tNnAmooDFQAAAAAdAAAAABAE');
+    background-size: cover; /* Asegura que la imagen cubra toda la diapositiva */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Opcional: para mantener el fondo fijo */
+    background-position: center;
+}
